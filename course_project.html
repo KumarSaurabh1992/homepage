@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+<title>Kumar Saurabh</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />-->
+<link rel="stylesheet" href="css/style-print.css" type="text/css" media="print" />
+    
+<!--    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js">
+   
+    </script>
+    
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    
+</head>
+<body>
+<!-- <img align = "right"  style = "width:100px;height:100px;margin:0px 30px" src="image.JPG" alt="Image" > </img>-->
+  <div id="wrapper">
+  
+  <div class="title">
+    <div class="title-top">
+      <div class="title-left">
+        <div class="title-right">
+          <div class="title-bottom">
+            <div class="title-top-left">
+              <div class="title-bottom-left">
+                <div class="title-top-right">
+                  <div class="title-bottom-right">
+                    <h1>Kumar Saurabh</h1>
+                    <p> Member Technical  Staff at SankhyaSutra Labs Pvt. Ltd</p>
+                    <p> Contact :kumar.saurabh.mnc14@gmail.com <br> &emsp;&emsp;&emsp;&emsp;&emsp;saurabh@sankhyasutralabs.com </p>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+  <hr class="noscreen" />
+  <div class="content">
+    <div class="column-left">
+      <h3>MENU</h3>
+      <a href="#skip-menu" class="hidden">Skip menu</a>
+      <ul class="menu">
+        <li><a href="Home.html" >Home</a></li>
+        <li><a href="Academics.html">Academics</a></li>
+        <li><a href="Job_Exp.html">Job Experience</a></li>
+        <li><a href="Research.html">Research Experience</a></li>
+          <li><a href="course_project.html" class="active">Course Projects</a></li>
+        <li><a href="cv_saurabh.pdf">CV</a></li>
+<!--        <li class="last"><a href="Contact.html">Contact</a></li>-->
+      </ul>
+    </div>
+    <div id="skip-menu"></div>
+    <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+<!--
+           <button data-toggle="collapse" data-target="#aim" ...>collapse</button>
+            <div id="aim" class="collapse">fdfdf</div>
+-->
+	<a data-toggle="collapse" href="#collapse1">
+	<h2> PDE Based Image Filtering</h2></a>
+     <div id="collapse1" class="panel-collapse collapse">
+         <p> <b> Course </b> : Mathematical Modelling in Industry <br>
+          <b> Course Instructor </b>: Dr. S . Sundar <br>
+             <b> Coding Language </b>: Matlab  [<a target="_blank" href = https://github.com/KumarSaurabh1992/PDE-Based-Image-Filtering> Link </a>] <br>
+             </p>
+         <p> As a part of the course project, Perona-Malik, Edge Enhancing Diffusion Model was implemented using Matlab. The contrast parameter lambda plays an important role in the Perona-Malik Model for the preservation of the image boundaries. In order to automatize the contrast Paramenter lambda, i.e, it can be taken automatically from the image, a new method was conceptualized which sets lambda to be 1.8 times the mean of the gradient after convolving the image. This works well for the test problem. The presentation can be found <a target="_blank" href = https://github.com/KumarSaurabh1992/PDE-Based-Image-Filtering> here </a>   </p>
+     		 
+            </div>
+            
+             <a data-toggle="collapse" href="#collapse3">
+	<h2> In-House Non-Linear Partial Differential Equation Solver </h2></a>
+     <div id="collapse3" class="panel-collapse collapse">
+            <p> <b> Course </b> : Computer Modelling and Simulation <br>
+          <b> Course Instructor </b>: Dr. S . Sundar <br>
+         <b> Coding Language </b>: C++  [<a target="_blank" href=" https://github.com/KumarSaurabh1992/Automatic-Differentiation-Tool" > Link </a>]<br>
+             </p>
+         <p>The inhouse solver was capable of solving 2D non-linear partial difference equation of the form: </p>
+         <div lang="latex" align="center">
+            f_1(u)\frac{\partial ^2 {u}}{\partial x^2} + 
+              f_2(u)\frac{\partial ^2 {u}}{\partial y^2} +
+              f_3(u)\frac{\partial  {u}}{\partial x} +
+              f_4(u)\frac{\partial  {u}}{\partial y} + 
+              f_5(u) = 0
+         </div>
+         
+         <p>where 
+        <!-- <div lang="latex"> f_1, f_2, f_3, f_4, f_5 </div> --> 
+         f<sub>1</sub>, f<sub>2</sub>,f<sub>3</sub>, f<sub>4</sub>, f<sub>5</sub> can be non-linear function of u. The boundary condition can be of the form: </p>
+         <div lang="latex" align="center">
+          \alpha u + \beta \frac{\partial u}{\partial x} = \gamma
+         </div>
+         
+        <p> The matrix, being of sparse nature was stored in Compressed Row Structure (CRS). 
+        For solving system of equations: AX=B, the Krylov Subspace method is incorporated into the code, mainly Conjugate Gradient, 
+        BiConjugate Gradient along with Jacobi, Gauss Siedel and ILU Preconditioner. 
+         </p>
+         
+         <p> The code is also capable of taking unequal spacing in the domain. One has to specify the starting point and end point in the domain and spacing (&#916) between these points. </p>
+            </div>
+             <a data-toggle="collapse" href="#collapse4">
+	<h2> Meshless Method to the flow Problem </h2></a>
+     <div id="collapse4" class="panel-collapse collapse">
+             <p> <b> Course </b> : Computer Modelling and Simulation <br>
+          <b> Course Instructor </b>: Dr. S . Sundar <br>
+         <b> Coding Language </b>: C++  [<a target="_blank" href="https://github.com/KumarSaurabh1992/Finite-Pointset-Method" > Link </a>] <br>
+             </p>
+         <p>During the second half of the course project, the code was developed to solve the flow problem using meshless Finite PointSet Method. 2D Poisson problem and 1D Sod Shock Tube was successfully solved. Due to time constraints, the code could not be extended to 2D unsteady problem. </p>
+            
+            </div>
+    
+            <a data-toggle="collapse" href="#collapse2">
+	<h2> Computational Fluid Dynamics </h2></a>
+     <div id="collapse2" class="panel-collapse collapse">
+          <p> <b> Course </b> : Advanced Computational Fluid Dynamics <br>
+              <b> Course Instructor </b> : Dr. Arul K. Prakash <br>
+              <b> Coding Language: </b> : Matlab [<a target="_blank" href="https://github.com/KumarSaurabh1992/CFD" >Link  </a>]
+         </p>
+         <p> In the first phase, the discretization of unsteady state Advection-Diffusion was done using Finite Volume Method. The time marching was done using Crank Nicholson Scheme and space discretization using Upwind and Central Difference Scheme separately. 
+         For the convergence speed Gauss Siedel, Conjucate Gradient and BiConjugate Gradient was compared. The detail report can be found here. </p>
+              
+         <p>In the second phase, the stream-vorticity approach was used to solve the channel flow. The results were compared with the experimental ones. </p>
+        
+         <p> For the final project, we developed the Volume of Fluid Code (VOF) by Hirt and Nicholas to track the deforming interface. The velocity field was assumed and the deforming interface was tracked accordingly. </p>
+         
+            </div>
+      <a data-toggle="collapse" href="#collapse5">
+	<h2> Time dependent Heat Conduction Problem on NURBS using Isogeometric Analysis </h2></a>
+     <div id="collapse5" class="panel-collapse collapse">
+          <p> <b> Course </b> : Isogeometric Analysis  <br>
+              <b> Course Instructor </b> Dr.-Ing. Stefanie Elgeti  <br>
+              <b> Coding Language: </b> : Matlab [<a target="_blank" href="https://github.com/KumarSaurabh1992/Isogeometric-Analysis" > Link </a>]
+         </p>
+         <p> During the course project, firstly the Matlab code was developed to construct the B-splines and NURBS along with its derivatives, given the knot vectors. The integration over the NURBS was done using the Gauss Quadrature rule. The NURB refinement code was provided during the course. Using the concept of IsoGeometric Analysis the unsteady heat conduction problem was solved on the NURBS.  </p>
+            </div>
+     			
+          
+          
+      
+            
+
+        </div>
+      </div>
+        </div>
+   <!-- <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+            
+            <a data-toggle="collapse" href="#collapse1"> <h2> Asynchronus Finite Difference for Advection Diffusion Equation</h2>
+            
+            <div id="collapse1" class="panel-collapse collapse">
+            
+            <p> Master Thesis Work under the supervision of <a href = "http://www.mathcces.rwth-aachen.de/5people/frank/start"> Prof. Dr. Martin Frank  </a> and <a href = "https://mat.iitm.ac.in/home/slnt/public_html/"> Dr. S Sundar</a></p>
+            
+            <p>Conference Paper: Kumar Saurabh, "Implementation of Asynchronous Scheme on Parallel Frameworks using MPI." in  18<sup>th</sup> AeSI Annual CFD Symposium.  </p>
+            <p> The numerical solution of partial differential equations in large-scale problems requires the usage of parallel computing. In this context, the computational domain is often split into smaller sub-domains that are handled by separate processors. Due to the non-local nature of the underlying problem, communication as well as synchronization between these processing elements (PEs) is required. Finite Difference is one of such techniques to solve the PDEs. Since the discretization by finite- difference schemes results in mostly simple arithmetic operations, the overhead due to communication and synchronization might become a bottleneck. Current trends in massively parallel computing systems suggest that the number of processors will continue to grow over time, which in turn, increases the overhead associated with communication and synchronization. Simulation at extreme levels of parallelism will then require an elimination, or at least a tight control of these overheads. While stability is conserved when these schemes are used asynchronously, accuracy is greatly degraded. Message arrivals at PEs are essentially random processes, so is the behavior of the error. Within a statistical framework the average errors drop always to first-order regardless of the statistics of delay.</p>
+            
+            <p>The Asynchrony Tolerant (AT) scheme proposed by Donzis &amp; Aditya and Anshumali are capable of maintaining the order of accuracy even in presence of delays and robust the asynchrony. A rigorous analysis of these scheme is performed. However, in all of these scheme the error increases with the increase in the delay. The two MPI communication technique, namely MPI Send/Recv and MPI Put/Get for the statistics of delay. Further, the effect of distributing the work accross various nodes is investigated. </p>
+            
+            <h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>MPI_Put/Get outperforms MPI_Send/Recv in delay statistics. This can be explained due to the fact that there is buffering of data in MPI_SendRecv while in the casr of MPI_Put/Get one processor writes directly in the window created by the another processor. Thus for the Asynchronous operation, MPI_Put/Get is preferred.  </li>
+                <li> The communication among the processor within the same node requires less time than communicating accross the nodes. Thus, it should be expected that the distribution of processor accross the node would take more time. But for a job requiring large Cache Size, this is not the case. This can be explained by the fact that distributing the processor accross the nodes gives access to more RAM, which in turn reduces the number of Cache Miss and Hit. </li>
+            </ul>
+            </div>
+          <a data-toggle="collapse" href="#collapse2"> <h2> Prediction of API Gravity of Crude Oils using SARA Analysis: Computational Intelligence based Models </h2>
+            <div id="collapse2" class="panel-collapse collapse">            
+            <p> Publication: Purva Goel, Kumar Saurabh, Veena Patil-Shinde and Sanjeev Tambe. "Prediction of API Gravity of Crude Oils using SARA Analysis: Computational Intelligence based Models". Accepted in Socierty of Petroleum Engineering. Paper Id:  SPE-184391-PA </p>
+            <p>The API gravity (API) is an important physicochemical characteristic of crude oils and often used in determining their properties and quality. There exist models— predominantly linear ones — for predicting the API magnitude from the molecular composition of a crude oil. This approach is tedious and time-consuming since it requires quantitative determination of numerous crude oil components. Usually, the hydrocarbons present in the crude oils are grouped according to their molecular average structures into Saturates, Aromatics, Resins and Asphaltenes (SARA) fractions. The non-linear relationship between SARA fraction and API gravity is modeled using three Computer Intelleigence based models namely Genetic Programming, Artificial Neural Network and Support Vector Regression. In order to verify the true nature of the dependencies (whether linear or nonlinear) between the SARA constituents and the corresponding API gravity values, a large dataset consisting of SARA analyses of 565 crude oil samples was compiled from a number of research articles including a database. The Steiger's Z-test (Steiger, 1980) was performed for rigorously comparing  the prediction and generalization performance of the three CI-based model.</p>
+            
+        <h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>It has been also found that each of the three CI-based nonlinear models possesses a better API gravity prediction accuracy and generalization capability than not only the original improved linear version</li>
+                <li> The The best fitting GP-based API gravity model developed in this study possesses a nonlinear form giving the eidence of nonlinear realationship.</li>
+                <li>A comparison of the prediction and generalization performance of the three CI-based models indicates that the SVR strategy has yielded an overall best performing model.</li>
+            </ul>
+        </div>
+      </div>
+      </div>
+      
+    </div> -->
+    <div class="cleaner">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>

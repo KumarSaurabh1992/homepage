@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Kumar Saurabh</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />-->
+<link rel="stylesheet" href="css/style-print.css" type="text/css" media="print" />
+    
+<!--    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    
+</head>
+<body>
+<!-- <img align = "right"  style = "width:100px;height:100px;margin:0px 30px" src="image.JPG" alt="Image" > </img>-->
+  <div id="wrapper">
+  
+  <div class="title">
+    <div class="title-top">
+      <div class="title-left">
+        <div class="title-right">
+          <div class="title-bottom">
+            <div class="title-top-left">
+              <div class="title-bottom-left">
+                <div class="title-top-right">
+                  <div class="title-bottom-right">
+                    <h1>Kumar Saurabh</h1>
+                    <p> Member Technical  Staff at SankhyaSutra Labs Pvt. Ltd</p>
+                      <p> Contact :kumar.saurabh.mnc14@gmail.com <br> &emsp;&emsp;&emsp;&emsp;&emsp;saurabh@sankhyasutralabs.com </p>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+  <hr class="noscreen" />
+  <div class="content">
+    <div class="column-left">
+      <h3>MENU</h3>
+      <a href="#skip-menu" class="hidden">Skip menu</a>
+      <ul class="menu">
+        <li><a href="Home.html" >Home</a></li>
+        <li><a href="Academics.html">Academics</a></li>
+        <li><a href="Job_Exp.html">Job Experience</a></li>
+        <li><a href="Research.html" class="active">Research Experience</a></li>
+          <li><a href="course_project.html">Course Project</a>
+        <li><a href="cv_saurabh.pdf">CV</a></li>
+<!--        <li class="last"><a href="Contact.html">Contact</a></li>-->
+      </ul>
+    </div>
+    <div id="skip-menu"></div>
+    <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+<!--
+           <button data-toggle="collapse" data-target="#aim" ...>collapse</button>
+            <div id="aim" class="collapse">fdfdf</div>
+-->
+	<a data-toggle="collapse" href="#collapse1">
+	<h2>  Asynchronus Finite Difference for Advection-Diffusion Equation</h2></a>
+     <div id="collapse1" class="panel-collapse collapse">
+          <p> <b> Conference Paper </b> : Kumar Saurabh, "Implementation of Asynchronous Scheme on 
+          Parallel Frameworks using MPI." in  18<sup>th</sup> AeSI Annual CFD Symposium. <a target="_blank" href = http://www.nal.res.in/cfdsympo/CFD_FullPapers_Final_18/Implementation%20of%20Asynchronous%20Scheme%20.pdf> Link </a> </p>
+         
+         <p> This work was a part of Master Thesis. The thesis and presentations can be found <a target="_blank" href = https://github.com/KumarSaurabh1992/Asynchronous-Finite-Difference-for-PDEs> here </a></p>
+         
+          <p> The numerical solution of partial differential equations in large-scale 
+          problems requires the usage of parallel computing. In this context, the 
+          computational domain is often split into smaller sub-domains that are handled 
+          by separate processors. Due to the non-local nature of the underlying problem, 
+          communication as well as synchronization between these processing elements (PEs) 
+          is required. Finite Difference is one of such techniques to solve the PDEs. 
+          Since the discretization by finite- difference schemes results in mostly simple 
+          arithmetic operations, the overhead due to communication and synchronization 
+          might become a bottleneck. Current trends in massively parallel computing systems
+          suggest that the number of processors will continue to grow over time, which in 
+          turn, increases the overhead associated with communication and synchronization. 
+          Simulation at extreme levels of parallelism will then require an elimination, 
+          or at least a tight control of these overheads. While stability is conserved when
+          these schemes are used asynchronously, accuracy is greatly degraded. Message 
+          arrivals at PEs are essentially random processes, so is the behavior of the error. 
+          Within a statistical framework the average errors drop always to first-order 
+          regardless of the statistics of delay.</p>
+          
+          <p>The Asynchrony Tolerant (AT) scheme proposed by Donzis &amp; Aditya <sup>1</sup> and 
+          Mudigree et. al.<sup>2</sup> are capable of maintaining the order of accuracy even in presence of 
+          delays and robust the asynchrony. A rigorous analysis of these scheme is 
+          performed. However, in all of these scheme the error increases with the 
+          increase in the delay. The two MPI communication technique, namely MPI 
+     		 Send/Recv and MPI Put/Get is compared for the statistics of delay. Further, 
+     		 the effect of distributing the work across various nodes is investigated. </p>
+     		 
+     		 <h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>MPI_Put/Get outperforms MPI_Send/Recv in delay statistics. 
+                This can be explained due to the fact that there is buffering of data in 
+                MPI_SendRecv while in the case of MPI_Put/Get one processor writes directly
+                in the window created by the another processor. Thus for the Asynchronous 
+                operation, MPI_Put/Get is preferred.  </li>
+                <li> The communication among the processor within the same node 
+                requires less time than communicating across the nodes. Thus, it should 
+                be expected that the distribution of processor across the node would take 
+                more time. But for a job requiring large Cache Size, this is not the case. 
+                This can be explained by the fact that distributing the processor across 
+                the nodes gives access to more RAM, which in turn reduces the number of Cache 
+                Miss and Hit. </li>
+            </ul>
+           
+            <h2> References </h2>
+             <ul class="main-list">
+                 <li> Diego, A. Donzis and Konduri, Aditya, 2004 “Asynchronous Finite Difference Scheme for Partial
+Difference Equations”, Journal of Computational Physics. 274(0), pp: 370-392.</li>
+                 <li>Mudigree, D., Sherleker,S., Ansumali, S., 2014 “Delayed Difference scheme for large scale scientific
+simulations”, Physical Review Letters, 113(21), 218701.</li>
+            </ul>
+         
+          </div>
+            
+     		 
+     			
+     			
+          
+          
+      
+            
+			<a data-toggle="collapse" href="#collapse2"> 
+			<h2> Prediction of API Gravity of Crude Oils using SARA Analysis: 
+			Computational Intelligence based Models</h2></a>
+     <div id="collapse2" class="panel-collapse collapse">
+         <p> <b> Publication:</b> Purva Goel, Kumar Saurabh, Veena Patil-Shinde and 
+            Sanjeev Tambe. "Prediction of API Gravity of Crude Oils using SARA Analysis: 
+            Computational Intelligence based Models". Accepted in Society of Petroleum 
+            Engineering. Paper Id:  SPE-184391-PA </p>
+            
+            <p>The API gravity (API) is an important physio-chemical characteristic of 
+            crude oils and often used in determining their properties and quality. There
+            exist models — predominantly linear ones — for predicting the API magnitude 
+				from the molecular composition of a crude oil. This approach is tedious and 
+				time-consuming since it requires quantitative determination of numerous crude 
+				oil components. Usually, the hydrocarbons present in the crude oils are grouped
+				according to their molecular average structures into Saturates, Aromatics, 
+				Resins and Asphaltenes (SARA) fractions. The non-linear relationship between 
+				SARA fraction and API gravity is modeled using three Computer Intelligence 
+				based models namely Genetic Programming, Artificial Neural Network and Support 
+				Vector Regression. In order to verify the true nature of the dependencies 
+				(whether linear or nonlinear) between the SARA constituents and the 
+				corresponding API gravity values, a large data-set consisting of SARA analyses 
+				of 565 crude oil samples was compiled from a number of research articles 
+				including a database. The Steiger's Z-test (Steiger, 1980) was performed for 
+				rigorously comparing  the prediction and generalization performance of the 
+				three CI-based model.</p>
+				
+				<h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>It has been also found that each of the three CI-based nonlinear 
+                models possesses a better API gravity prediction accuracy and 
+                generalization capability than not only the original improved linear 
+                version</li>
+                <li> The The best fitting GP-based API gravity model developed in this 
+                study possesses a nonlinear form giving the evidence of nonlinear 
+                relationship.</li>
+                <li>A comparison of the prediction and generalization performance of 
+                the three CI-based models indicates that the SVR strategy has yielded an 
+                overall best performing model.</li>
+            </ul>
+            
+            
+      </div>
+        </div>
+      </div>
+        </div>
+   <!-- <div class="column-right">
+      <div class="box">
+        <div class="box-top"></div>
+        <div class="box-in">
+            
+            <a data-toggle="collapse" href="#collapse1"> <h2> Asynchronus Finite Difference for Advection Diffusion Equation</h2>
+            
+            <div id="collapse1" class="panel-collapse collapse">
+            
+            <p> Master Thesis Work under the supervision of <a href = "http://www.mathcces.rwth-aachen.de/5people/frank/start"> Prof. Dr. Martin Frank  </a> and <a href = "https://mat.iitm.ac.in/home/slnt/public_html/"> Dr. S Sundar</a></p>
+            
+            <p>Conference Paper: Kumar Saurabh, "Implementation of Asynchronous Scheme on Parallel Frameworks using MPI." in  18<sup>th</sup> AeSI Annual CFD Symposium.  </p>
+            <p> The numerical solution of partial differential equations in large-scale problems requires the usage of parallel computing. In this context, the computational domain is often split into smaller sub-domains that are handled by separate processors. Due to the non-local nature of the underlying problem, communication as well as synchronization between these processing elements (PEs) is required. Finite Difference is one of such techniques to solve the PDEs. Since the discretization by finite- difference schemes results in mostly simple arithmetic operations, the overhead due to communication and synchronization might become a bottleneck. Current trends in massively parallel computing systems suggest that the number of processors will continue to grow over time, which in turn, increases the overhead associated with communication and synchronization. Simulation at extreme levels of parallelism will then require an elimination, or at least a tight control of these overheads. While stability is conserved when these schemes are used asynchronously, accuracy is greatly degraded. Message arrivals at PEs are essentially random processes, so is the behavior of the error. Within a statistical framework the average errors drop always to first-order regardless of the statistics of delay.</p>
+            
+            <p>The Asynchrony Tolerant (AT) scheme proposed by Donzis &amp; Aditya and Anshumali are capable of maintaining the order of accuracy even in presence of delays and robust the asynchrony. A rigorous analysis of these scheme is performed. However, in all of these scheme the error increases with the increase in the delay. The two MPI communication technique, namely MPI Send/Recv and MPI Put/Get for the statistics of delay. Further, the effect of distributing the work accross various nodes is investigated. </p>
+            
+            <h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>MPI_Put/Get outperforms MPI_Send/Recv in delay statistics. This can be explained due to the fact that there is buffering of data in MPI_SendRecv while in the casr of MPI_Put/Get one processor writes directly in the window created by the another processor. Thus for the Asynchronous operation, MPI_Put/Get is preferred.  </li>
+                <li> The communication among the processor within the same node requires less time than communicating accross the nodes. Thus, it should be expected that the distribution of processor accross the node would take more time. But for a job requiring large Cache Size, this is not the case. This can be explained by the fact that distributing the processor accross the nodes gives access to more RAM, which in turn reduces the number of Cache Miss and Hit. </li>
+            </ul>
+            </div>
+          <a data-toggle="collapse" href="#collapse2"> <h2> Prediction of API Gravity of Crude Oils using SARA Analysis: Computational Intelligence based Models </h2>
+            <div id="collapse2" class="panel-collapse collapse">            
+            <p> Publication: Purva Goel, Kumar Saurabh, Veena Patil-Shinde and Sanjeev Tambe. "Prediction of API Gravity of Crude Oils using SARA Analysis: Computational Intelligence based Models". Accepted in Socierty of Petroleum Engineering. Paper Id:  SPE-184391-PA </p>
+            <p>The API gravity (API) is an important physicochemical characteristic of crude oils and often used in determining their properties and quality. There exist models— predominantly linear ones — for predicting the API magnitude from the molecular composition of a crude oil. This approach is tedious and time-consuming since it requires quantitative determination of numerous crude oil components. Usually, the hydrocarbons present in the crude oils are grouped according to their molecular average structures into Saturates, Aromatics, Resins and Asphaltenes (SARA) fractions. The non-linear relationship between SARA fraction and API gravity is modeled using three Computer Intelleigence based models namely Genetic Programming, Artificial Neural Network and Support Vector Regression. In order to verify the true nature of the dependencies (whether linear or nonlinear) between the SARA constituents and the corresponding API gravity values, a large dataset consisting of SARA analyses of 565 crude oil samples was compiled from a number of research articles including a database. The Steiger's Z-test (Steiger, 1980) was performed for rigorously comparing  the prediction and generalization performance of the three CI-based model.</p>
+            
+        <h2> Key Findings</h2>
+            <ul class="main-list">
+                <li>It has been also found that each of the three CI-based nonlinear models possesses a better API gravity prediction accuracy and generalization capability than not only the original improved linear version</li>
+                <li> The The best fitting GP-based API gravity model developed in this study possesses a nonlinear form giving the eidence of nonlinear realationship.</li>
+                <li>A comparison of the prediction and generalization performance of the three CI-based models indicates that the SVR strategy has yielded an overall best performing model.</li>
+            </ul>
+        </div>
+      </div>
+      </div>
+      
+    </div> -->
+    <div class="cleaner">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>
